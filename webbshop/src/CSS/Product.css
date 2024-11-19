@@ -1,0 +1,39 @@
+/* CSS/Product.css */
+
+.product-details {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product-details img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .product-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .product-details button {
+    padding: 10px 15px;
+    background-color: #6b4f4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-details button:hover {
+    background-color: #8a6565;
+  }
+  

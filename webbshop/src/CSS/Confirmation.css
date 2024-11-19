@@ -1,0 +1,18 @@
+/* CSS/Confirmation.css */
+
+.confirmation {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .confirmation h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #6b4f4f;
+  }
+  
+  .confirmation p {
+    font-size: 18px;
+    color: #333;
+  }
+  
