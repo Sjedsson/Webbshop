@@ -3,7 +3,7 @@
   max-width: 1200px;
   margin: 10px auto;
   text-align: center;
-  color: #333;
+  color: #6b4f4f;
 }
 
 h1 {
@@ -95,8 +95,8 @@ h2 {
   }
 
   .favorite-item-image {
-    height: 60%;
-    width: 60%;
+    height: 200px;
+    width: 200px;
     margin-right: 0;
     margin-bottom: 10px;
   }

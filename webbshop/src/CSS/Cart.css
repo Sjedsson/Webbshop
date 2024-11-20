@@ -128,10 +128,12 @@ h2 {
   .cart-item-image {
     margin-right: 0;
     margin-bottom: 10px;
+    height: 200px;
   }
 
-  .cart-item-details {
+  .cart-item-details p {
     text-align: center;
+    font-size: 1rem;
   }
 
   .quantity-controls {
