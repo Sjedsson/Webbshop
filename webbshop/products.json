@@ -2,24 +2,34 @@
   {
     "id": 1,
     "name": "Colombian Coffee",
-    "description": "Rich and bold.",
+    "description": "Rich and bold with a perfect balance of acidity and sweetness, ideal for a morning boost.",
     "price": 12.99,
-    "image": "/assets/Icons/Colombia.jpg"
+    "image": "/assets/Icons/Colombia.jpg",
+    "tastingNotes": "Bright acidity with fruity undertones and a smooth finish.",
+    "strength": 80,
+    "sweetness": 70,
+    "acidity": 60
+  },
+  {
+    "id": 2,
+    "name": "Ethiopian Coffee",
+    "description": "Fruity and aromatic, with floral notes and a bright, crisp finish. A favorite for coffee enthusiasts.",
+    "price": 14.99,
+    "image": "/assets/Pictures/Ethiopia.jpg",
+    "tastingNotes": "Floral aroma with hints of berry and citrus, and a clean aftertaste.",
+    "strength": 60,
+    "sweetness": 85,
+    "acidity": 90
+  },
+  {
+    "id": 3,
+    "name": "Brazilian Coffee",
+    "description": "Smooth and nutty, with chocolatey undertones and a rich body. Perfect for a comforting cup.",
+    "price": 10.99,
+    "image": "/assets/Pictures/Brazil.jpg",
+    "tastingNotes": "Rich chocolate notes with a smooth nutty finish, ideal for those who love a full-bodied cup.",
+    "strength": 70,
+    "sweetness": 60,
+    "acidity": 50
   }
-  ,
-    {
-      "id": 2,
-      "name": "Ethiopian Coffee",
-      "description": "Fruity and aromatic.",
-      "price": 14.99,
-      "image": "/assets/Pictures/Ethiopia.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Brazilian Coffee",
-      "description": "Smooth and nutty.",
-      "price": 10.99,
-      "image": "/assets/Pictures/Brazil.jpg"
-    }
-  ]
-  
+]

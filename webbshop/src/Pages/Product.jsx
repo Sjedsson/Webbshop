@@ -43,7 +43,27 @@ const Product = ({ addToCart }) => {
       <h1>{product.name}</h1>
       <p>{product.description}</p>
       <p>Price: ${product.price.toFixed(2)}</p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
+
+      <h2>Tasting Notes:</h2>
+      <p>{product.tastingNotes || "Enjoy the unique flavor profile with every sip!"}</p>
+
+      {/* Flavor Profile Graph */}
+      <div className="flavor-profile">
+        <h3>Flavor Profile</h3>
+        <div className="flavor-bar">
+          <div className="flavor-item strength" style={{ width: `${product.strength}%` }}>
+            <span>Strength</span>
+          </div>
+          <div className="flavor-item sweetness" style={{ width: `${product.sweetness}%` }}>
+            <span>Sweetness</span>
+          </div>
+          <div className="flavor-item acidity" style={{ width: `${product.acidity}%` }}>
+            <span>Acidity</span>
+          </div>
+        </div>
+      </div>
+
+      <button className='product-cart' onClick={handleAddToCart}>Add to Cart</button>
 
       {popupMessage && (
         <div className="popup">
