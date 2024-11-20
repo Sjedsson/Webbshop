@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../CSS/Cart.css';
 
 const Cart = ({ cartItems, updateCartQuantity, removeFromCart }) => {
+  const navigate = useNavigate();
+
   const handleQuantityChange = (id, value) => {
     if (value > 0) {
       updateCartQuantity(id, value);
@@ -26,6 +29,12 @@ const Cart = ({ cartItems, updateCartQuantity, removeFromCart }) => {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+
+  const handleProceedToCheckout = () => {
+    navigate('/checkout', {
+      state: { cartItems, totalPrice }
+    });
+  };
 
   return (
     <div className="cart">
@@ -73,6 +82,9 @@ const Cart = ({ cartItems, updateCartQuantity, removeFromCart }) => {
             </div>
           ))}
           <h2>Total: ${totalPrice.toFixed(2)}</h2>
+          <button className="checkout-button" onClick={handleProceedToCheckout}>
+            Proceed to Checkout
+          </button>
         </div>
       )}
     </div>

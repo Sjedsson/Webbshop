@@ -4,7 +4,17 @@
   align-items: center;
   background-color: #ffffff;
   padding: 10px 20px;
-  
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align logo to the left */
+}
+
+.header .logo img {
+  max-width: 200px; /* Adjust the logo size */
+  height: auto;
 }
 
 .header .logo h1 {
@@ -17,7 +27,7 @@
 .header-icons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  margin-right: -20px;
 }
 
 .icon-button {
@@ -31,18 +41,60 @@
 }
 
 .icon-button .lottie-icon {
-  width: 50px; /* Consistent size */
-  height: 50px; /* Consistent size */
+  width: 60px; 
+  height: 60px;
 }
 
 .icon-button .badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: rgb(167, 71, 27);
+  top: -1px;
+  right: -0.01px;
+  background-color:#6b4f4f;
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   border-radius: 50%;
-  padding: 2px 5px;
+  padding: 5px 8px;
   font-weight: bold;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    border-radius: 8px;
+  }
+
+  .icon-button .lottie-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-button {
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -25px;
+  }
+
+  .icon-button .badge {
+    position: absolute;
+    top: -1px;
+    right: -0.01px;
+    background-color:#6b4f4f;
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    padding: 2px 4px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .header .logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
 }

@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "Colombian Coffee",
+    "description": "Rich and bold.",
+    "price": 12.99,
+    "image": "/assets/Icons/Colombia.jpg"
+  }
+  ,
+    {
+      "id": 2,
+      "name": "Ethiopian Coffee",
+      "description": "Fruity and aromatic.",
+      "price": 14.99,
+      "image": "/assets/Pictures/Ethiopia.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Brazilian Coffee",
+      "description": "Smooth and nutty.",
+      "price": 10.99,
+      "image": "/assets/Pictures/Brazil.jpg"
+    }
+  ]
+  

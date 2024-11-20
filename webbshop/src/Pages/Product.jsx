@@ -1,28 +1,55 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import '../CSS/Product.css';
+import backIcon from '../assets/icons/back.png';  // Importing the back icon
 
-const products = [
-  { id: 1, name: 'Colombian Coffee', description: 'Rich and bold.', price: 12.99, image: '/assets/colombian.jpg' },
-  { id: 2, name: 'Ethiopian Coffee', description: 'Fruity and aromatic.', price: 14.99, image: '/assets/ethiopian.jpg' },
-  { id: 3, name: 'Brazilian Coffee', description: 'Smooth and nutty.', price: 10.99, image: '/assets/brazilian.jpg' },
-];
-
-const Product = () => {
+const Product = ({ addToCart }) => {
   const { id } = useParams();
-  const product = products.find((item) => item.id === parseInt(id));
+  const [product, setProduct] = useState(null);
+  const [popupMessage, setPopupMessage] = useState(''); // State for popup message
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch('/products.json');
+      const data = await response.json();
+      const foundProduct = data.find((item) => item.id === parseInt(id));
+      setProduct(foundProduct);
+    };
+
+    fetchProducts();
+  }, [id]);
 
   if (!product) {
     return <p>Product not found!</p>;
   }
 
+  const handleAddToCart = () => {
+    addToCart(product);
+    setPopupMessage(`${product.name} added to cart!`);
+    setTimeout(() => setPopupMessage(''), 3000); 
+  };
+
   return (
     <div className="product-details">
-      <img src={product.image} alt={product.name} />
+      <img 
+        src={backIcon} 
+        alt="Back" 
+        className="back-icon" 
+        onClick={() => navigate(-1)} 
+      />
+      
+      <img src={product.image} alt={product.name} className="product-image" />
       <h1>{product.name}</h1>
       <p>{product.description}</p>
       <p>Price: ${product.price.toFixed(2)}</p>
-      <button>Add to Cart</button>
+      <button onClick={handleAddToCart}>Add to Cart</button>
+
+      {popupMessage && (
+        <div className="popup">
+          <p>{popupMessage}</p>
+        </div>
+      )}
     </div>
   );
 };

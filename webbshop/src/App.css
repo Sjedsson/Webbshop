@@ -40,16 +40,17 @@ footer p {
   transform: translateX(-50%);
   background-color: #6b4f4f;
   color: white;
-  padding: 10px 30px;
+  padding: 6px 12px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: bold;
   z-index: 1000;
   animation: fadeInOut 3s ease-in-out;
-  max-width: 90%;
+  max-width: 80%;
   word-wrap: break-word;
-  text-align: center; /* Center the text */
+  text-align: center;
+  width: auto; 
 }
 
 @keyframes fadeInOut {
@@ -67,10 +68,11 @@ footer p {
   }
 }
 
-/* Adjust the font size and padding for smaller devices */
 @media (max-width: 600px) {
   .popup {
-    font-size: 12px; /* Smaller text for small screens */
-    padding: 5px 10px; /* Reduce padding */
+    font-size: 12px;
+    padding: 4px 8px;  
+    max-width: 90%;
   }
 }
+

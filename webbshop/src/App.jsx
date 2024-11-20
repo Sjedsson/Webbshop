@@ -20,7 +20,7 @@ function App() {
     return storedLiked ? JSON.parse(storedLiked) : [];
   });
 
-  const [popupMessage, setPopupMessage] = useState(''); // State for popup message
+  const [popupMessage, setPopupMessage] = useState('');
 
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -30,7 +30,6 @@ function App() {
     localStorage.setItem('likedItems', JSON.stringify(likedItems));
   }, [likedItems]);
 
-  // Close the popup after 2 seconds
   useEffect(() => {
     if (popupMessage) {
       const timer = setTimeout(() => {
