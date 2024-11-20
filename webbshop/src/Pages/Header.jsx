@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import cartIcon from '../assets/Icons/cart.png';
-import favoriteIcon from '../assets/Icons/favorite.png';
+import HeartAnimation from '../Components/HeartAnimation';
+import CartAnimation from '../Components/CartAnimation';
 import '../CSS/Header.css';
 
-const Header = ({ cartItems }) => {
+const Header = ({ cartItems, likedItems = [] }) => {
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const likeCount = likedItems.length; // Ensure likedItems is defined and calculate length
 
   return (
     <header className="header">
@@ -15,13 +16,22 @@ const Header = ({ cartItems }) => {
         </Link>
       </div>
       <div className="header-icons">
-        <button className="icon-button">
-          <img src={favoriteIcon} alt="Favorites" className="icon" />
-          <span className="badge">0</span>
-        </button>
+        {/* Heart Animation */}
+        <Link to="/favorite"> {/* Corrected to link to Favorite.jsx */}
+          <button className="icon-button">
+            <div className="lottie-icon">
+              <HeartAnimation />
+            </div>
+            <span className="badge">{likeCount}</span>
+          </button>
+        </Link>
+
+        {/* Cart Animation */}
         <Link to="/cart">
           <button className="icon-button">
-            <img src={cartIcon} alt="Cart" className="icon" />
+            <div className="lottie-icon">
+              <CartAnimation />
+            </div>
             <span className="badge">{cartCount}</span>
           </button>
         </Link>

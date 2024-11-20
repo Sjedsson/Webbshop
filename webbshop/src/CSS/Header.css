@@ -1,73 +1,48 @@
-/* CSS/Header.css */
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #9a9a9a;
-    padding: 10px 20px;
-    color: white;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
   
-  .header .logo h1 {
-    font-size: 24px;
-    margin: 0;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-  }
-  
-  .header-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .icon-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  
-  .badge {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: red;
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-weight: bold;
-  }
+}
 
+.header .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
 
-.header-icons .icon-button {
-    background: none;
-    border: none;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .header-icons .icon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .header-icons .badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: rgb(167, 71, 27);
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    padding: 2px 5px;
-    font-weight: bold;
-  }
-  
-  
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button .lottie-icon {
+  width: 50px; /* Consistent size */
+  height: 50px; /* Consistent size */
+}
+
+.icon-button .badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: rgb(167, 71, 27);
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-weight: bold;
+}
